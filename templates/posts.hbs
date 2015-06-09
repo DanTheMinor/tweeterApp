@@ -1,7 +1,12 @@
 <h1>Some twatter's blog</h1>
 
 <ul>
-  {{#each model as |post|}}
+  <!-- {{#each model as |post|}}
     <li>{{#link-to 'post' post.id}}{{post.title}}{{/link-to}}</li>
+  {{/each}} -->
+  {{#each}}
+    <li>{{#link-to 'post' this.id}}{{this.title}}{{/link-to}}</li>
   {{/each}}
 </ul>
+
+<p><a href="#" {{action 'sortByTitle'}}>Sort by Title</a></p>

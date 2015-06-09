@@ -1,13 +1,18 @@
 var posts = [
   {
     id: '1',
-    title: 'test',
-    body: 'some body text'
+    title: 'btitle',
+    body: 'some body textz'
   },
   {
     id: '2',
-    title: 'test2',
-    body: 'some body text2'
+    title: 'atitle',
+    body: 'some body texta'
+  },
+  {
+    id: '3',
+    title: 'ztitle',
+    body: 'some body textb'
   }
 ]
 
