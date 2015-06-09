@@ -1,21 +1,11 @@
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <title>Twatter: a Twitter Clone</title>
-  </head>
-  <body>
-    things
-    <div class='container'>
-      {{outlet}}
-    </div>
-  </body>
-</html> -->
+
 
 <div class="container">
   <nav class="navbar navbar-default" role="navigation">
-    <ul>
+    <ul class='nav navbar-nav'>
       <li>About</li>
       <li>Posts</li>
+      <li>{{#link-to 'recent-comments'}}Recent Comments{{/link-to}}</li>
     </ul>
   </nav>
   {{outlet}}
