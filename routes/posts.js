@@ -1,5 +1,5 @@
 Twatter.PostsRoute = Ember.Route.extend({
-  controllerName: 'posts',
+  // controllerName: 'posts',
   model: function() {
     return posts;
   }

@@ -1,7 +1,8 @@
 <h1>Some twatter's blog</h1>
 
 <ul>
-  <!-- {{#each}}
-    <li>{{title}}</li>
-  {{/each}} -->
+  <li>test</li>
+  {{#each model as |post|}}
+    <li>{{post.title}}</li>
+  {{/each}}
 </ul>
