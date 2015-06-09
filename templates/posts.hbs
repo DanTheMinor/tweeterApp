@@ -1,15 +1,23 @@
 <h1>Some twatter's blog</h1>
+
+<form>
+  <div class='form-gruop'>
+    <label for="new-post">Add Post</label>
+    {{textarea value=new-post name="new-post" id="new-post" class="form-control" rows=2}}
+  </div>
+
+  <button class="btn btn-primary" {{action 'addPost'}}>Add Post</button>
+</form>
+
 <ul>
   <!-- {{#each model as |post|}}
     <li>{{#link-to 'post' post.id}}{{post.title}}{{/link-to}}</li>
   {{/each}} -->
-  {{#each}}
+  <!-- {{#each}}
     <li>{{#link-to 'post' this.id}}{{this.title}}{{/link-to}}</li>
+  {{/each}} -->
+  {{#each post in this}}
+    <li>{{#link-to 'post' post.id}}{{post.title}}{{/link-to}}</li>
   {{/each}}
 </ul>
-
 <p><a href="#" {{action 'sortByTitle'}}>Sort by Title</a></p>
-<!-- <p {{action 'addPost'}}>{{#link-to 'post' posts.length}}Add a Post{{/link-to}}</p>
-<p {{action 'addPost'}}>Add a Post</p> -->
-<p>{{#link-to 'new-post' classNames="btn btn-primary"}}New post{{/link-to}}</p>
-{{debugger}}

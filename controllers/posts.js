@@ -1,18 +1,15 @@
 Twatter.PostsController = Ember.ArrayController.extend({
   // sortProperties: ['title'],
   //sortAscending: false,
-  index: 3,
   actions: {
-    sortByTitle: function() {
-      this.set('sortProperties', ['title']);
-    },
     addPost: function() {
-      this.set('index', this.index + 1);
-      this.addObject({
-        id: this.index,
-        title: 'newPost title',
-        body: 'newPost body'
-      })
+      var newPost = {id: (posts.length + 1), title: this.get('new-post'), body: 'body test'};
+      posts.addObject(newPost);
+      //debugger
+    },
+    sortByTitle: function() {
+      //debugger
+      this.set('sortProperties', ['title']);
     }
   }
 });
