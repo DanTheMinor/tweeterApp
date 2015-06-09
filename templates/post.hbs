@@ -1,5 +1,4 @@
 <h1>{{title}}</h1>
-
 {{#if isEditing}}
   <form>
     <div class="form-group">
@@ -14,10 +13,17 @@
 
     <button class="btn btn-danger" {{action 'save'}}>Save</button>
   </form>
-
 {{else}}
   <p>
     {{body}}
   </p>
   <button class="btn btn-success" {{action 'edit'}}>Edit</button>
 {{/if}}
+
+{{#each comment in comments itemController="comment"}}
+  <p>
+    {{comment.text}}
+  </p>
+{{/each}}
+
+<p>{{#link-to 'new-comment' this class="btn btn-success"}}New Comment{{/link-to}}</p>

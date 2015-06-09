@@ -1,5 +1,4 @@
 <h1>Some twatter's blog</h1>
-
 <ul>
   <!-- {{#each model as |post|}}
     <li>{{#link-to 'post' post.id}}{{post.title}}{{/link-to}}</li>
@@ -10,3 +9,7 @@
 </ul>
 
 <p><a href="#" {{action 'sortByTitle'}}>Sort by Title</a></p>
+<!-- <p {{action 'addPost'}}>{{#link-to 'post' posts.length}}Add a Post{{/link-to}}</p>
+<p {{action 'addPost'}}>Add a Post</p> -->
+<p>{{#link-to 'new-post' classNames="btn btn-primary"}}New post{{/link-to}}</p>
+{{debugger}}
